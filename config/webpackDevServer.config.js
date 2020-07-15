@@ -1,4 +1,4 @@
-'use strict';
+
 
 const fs = require('fs');
 const errorOverlayMiddleware = require('react-dev-utils/errorOverlayMiddleware');
@@ -126,5 +126,6 @@ module.exports = function(proxy, allowedHost) {
       // https://github.com/facebook/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware(paths.publicUrlOrPath));
     },
+    progress: true,
   };
 };
