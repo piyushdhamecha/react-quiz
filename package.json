@@ -26,10 +26,14 @@
   },
   "homepage": "https://github.com/piyushdhamecha/react-quiz#readme",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-hook-form": "^6.0.6",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -41,7 +45,9 @@
     "babel-loader": "^8.1.0",
     "css-loader": "^3.6.0",
     "html-webpack-plugin": "^4.3.0",
+    "source-map-loader": "^1.0.1",
     "style-loader": "^1.2.1",
+    "ts-loader": "^8.0.1",
     "tslint": "^6.1.2",
     "tslint-immutable": "^6.0.1",
     "typescript": "^3.9.6",

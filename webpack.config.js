@@ -19,16 +19,21 @@ module.exports = {
 
   module: {
     rules: [
-
-      // we use babel-loader to load our jsx and tsx files
       {
-        test: /\.(ts|js)x?$/,
+        test: /\.ts(x?)$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader'
-        },
+        use: [
+          {
+            loader: "ts-loader"
+          }
+        ]
       },
-
+      // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
+      {
+        enforce: "pre",
+        test: /\.js$/,
+        loader: "source-map-loader"
+      },
       // css-loader to bundle all the css files into one file and style-loader to add all the styles  inside the style tag of the document
       {
         test: /\.css$/,
@@ -40,5 +45,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html'
     })
-  ]
+  ],
+  devServer: {
+    progress: true,
+  }
 };

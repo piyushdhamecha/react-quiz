@@ -1,8 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
 import '../styles/index.css';
 
-class App extends React.PureComponent {
+class App extends React.PureComponent<{}, {}> {
   render() {
     return (
       <div>
